@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
     debugger;
     this.http.get('https://freeapi.gerasim.in/api/User/GetAllUsers').subscribe((res:any) => {
       this.users = res.data;
-    } , error => {
+    } , (error: any) => {
       alert("Error From API")
     })
   }
